@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "ui5 build"
+    "build": "ui5 build --clean-dest"
   },
   "devDependencies": {
     "@ui5/cli": "^2.10.2",

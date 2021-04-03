@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "ui5 build --include-task generateCachebusterInfo",
+    "build": "ui5 build --clean-dest --include-task generateCachebusterInfo",
     "dev": "ui5 serve"
   },
   "dependencies": {
