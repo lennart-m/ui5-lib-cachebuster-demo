@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "label": "Build MTA"
+    },
+    {
+      "type": "npm",
+      "path": "ui-lib",
+      "script": "build",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Build UI5 lib"
+    },
+    {
+      "type": "npm",
+      "path": "ui-app",
+      "script": "build",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Build UI5 app"
+    }
+  ]
+}

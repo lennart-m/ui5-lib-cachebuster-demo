@@ -1,0 +1,24 @@
+{
+  "name": "ui5-lib-cachebuster-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lennart-m/ui5-lib-cachebuster-demo.git",
+  "author": "Lennart Meinhardt <lennart.meinhardt@googlemail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "ui-app",
+    "ui-lib"
+  ],
+  "scripts": {
+    "postinstall": "cd approuter && yarn install",
+    "build": "mbt build",
+    "deploy": "cf deploy mta_archives/* -f --retries 0",
+    "format": "prettier . --write"
+  },
+  "devDependencies": {
+    "@prettier/plugin-xml": "^0.13.1",
+    "mbt": "^1.1.1",
+    "prettier": "^2.2.1"
+  }
+}

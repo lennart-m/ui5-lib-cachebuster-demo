@@ -1,0 +1,21 @@
+{
+  "welcomeFile": "app/index.html",
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "source": "^/lib/(?:~[^/]*~/)?(.*)$",
+      "service": "html5-apps-repo-rt",
+      "target": "myui5lib/$1"
+    },
+    {
+      "source": "^/app/resources/(.*)$",
+      "target": "$1",
+      "destination": "ui5"
+    },
+    {
+      "source": "^/app/(?:~[^/]*~/)?(.*)$",
+      "service": "html5-apps-repo-rt",
+      "target": "myui5app/$1"
+    }
+  ]
+}

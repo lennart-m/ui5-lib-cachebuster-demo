@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "json.schemas": [
+    {
+      "fileMatch": ["xs-app.json"],
+      "url": "https://json.schemastore.org/xs-app.json"
+    }
+  ],
+  "editor.rulers": [120],
+  "npm.packageManager": "yarn"
+}

@@ -1,0 +1,10 @@
+specVersion: "2.3"
+metadata:
+  name: ui-lib
+type: library
+builder:
+  customTasks:
+    - name: ui5-task-zipper
+      afterTask: uglify
+      configuration:
+        archiveName: ui-lib-content

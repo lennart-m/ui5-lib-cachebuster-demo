@@ -1,0 +1,75 @@
+ID: my-demo
+_schema-version: "3.1"
+version: 1.0.0
+parameters:
+  enable-parallel-deployments: true
+  deploy_mode: html5-repo
+modules:
+  - name: my-demo-approuter
+    type: approuter.nodejs
+    path: approuter
+    build-parameters:
+      ignore:
+        - node_modules/
+      builder: custom
+      commands: []
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    properties:
+      TENANT_HOST_PATTERN: "^(.*)-(.*)-my-demo.cfapps.(.*).hana.ondemand.com"
+    requires:
+      - name: my-demo-repo_runtime
+      - name: my-demo-destination
+  - name: my-demo-deployer
+    type: com.sap.application.content
+    path: .
+    requires:
+      - name: my-demo-repo_host
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: resources
+      requires:
+        - artifacts:
+            - "ui-app-content.zip"
+          name: my-demo-ui-app
+          target-path: resources/
+        - artifacts:
+            - "ui-lib-content.zip"
+          name: my-demo-ui-lib
+          target-path: resources/
+  - name: my-demo-ui-app
+    type: html5
+    path: ui-app
+    build-parameters:
+      builder: custom
+      commands:
+        - yarn build
+      supported-platforms: []
+      build-result: dist
+  - name: my-demo-ui-lib
+    type: html5
+    path: ui-lib
+    build-parameters:
+      builder: custom
+      commands:
+        - yarn build
+      supported-platforms: []
+      build-result: dist
+resources:
+  - name: my-demo-repo_host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-host
+  - name: my-demo-repo_runtime
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service-plan: app-runtime
+      service: html5-apps-repo
+  - name: my-demo-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service-plan: lite
+      service: destination

@@ -1,0 +1,27 @@
+{
+  "name": "ui-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "ui5 build --include-task generateCachebusterInfo",
+    "dev": "ui5 serve"
+  },
+  "dependencies": {
+    "ui-lib": "*"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.10.2",
+    "ui5-middleware-index": "^0.2.2",
+    "ui5-middleware-livereload": "^0.5.3",
+    "ui5-task-zipper": "^0.4.2"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui-lib",
+      "ui5-middleware-index",
+      "ui5-middleware-livereload",
+      "ui5-task-zipper"
+    ]
+  }
+}

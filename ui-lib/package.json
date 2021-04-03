@@ -1,0 +1,18 @@
+{
+  "name": "ui-lib",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "ui5 build"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.10.2",
+    "ui5-task-zipper": "^0.4.2"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-task-zipper"
+    ]
+  }
+}
