@@ -11,7 +11,7 @@ sap.ui.define(
             interfaces: [],
             controls: [],
             elements: [],
-            noLibraryCSS: true,
+            noLibraryCSS: false,
         });
         /* eslint-disable */
 

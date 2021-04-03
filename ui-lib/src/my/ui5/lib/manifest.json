@@ -21,7 +21,7 @@
     },
     "library": {
       "i18n": "messagebundle.properties",
-      "css": false,
+      "css": true,
       "content": {
         "controls": [],
         "elements": [],
