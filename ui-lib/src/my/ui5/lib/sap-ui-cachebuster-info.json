@@ -2,5 +2,7 @@
   "library.js": 1,
   "library-dbg.js": 1,
   "library-preload.js": 1,
-  "manifest.json": 1
+  "manifest.json": 1,
+  "messagebundle.properties": 1,
+  "themes/sap_fiori_3/library.css": 1
 }
