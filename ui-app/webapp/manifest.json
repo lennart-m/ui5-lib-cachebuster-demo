@@ -3,7 +3,11 @@
   "sap.app": {
     "id": "my.ui5.app",
     "type": "application",
-    "i18n": "i18n/i18n.properties",
+    "i18n": {
+      "bundleUrl": "i18n/i18n.properties",
+      "supportedLocales": [""],
+      "fallbackLocale": ""
+    },
     "applicationVersion": {
       "version": "${version}"
     },
@@ -61,7 +65,9 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "my.ui5.app.i18n.i18n"
+          "bundleName": "my.ui5.app.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
         }
       }
     }

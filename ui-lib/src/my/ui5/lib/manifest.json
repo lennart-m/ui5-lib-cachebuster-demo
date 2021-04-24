@@ -20,7 +20,11 @@
       }
     },
     "library": {
-      "i18n": "messagebundle.properties",
+      "i18n": {
+        "bundleUrl": "messagebundle.properties",
+        "supportedLocales": [""],
+        "fallbackLocale": ""
+      },
       "css": true,
       "content": {
         "controls": [],
