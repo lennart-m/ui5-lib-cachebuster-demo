@@ -8,10 +8,12 @@
   },
   "devDependencies": {
     "@ui5/cli": "^2.10.2",
+    "ui5-task-generatelibcachebuster": "*",
     "ui5-task-zipper": "^0.4.2"
   },
   "ui5": {
     "dependencies": [
+      "ui5-task-generatelibcachebuster",
       "ui5-task-zipper"
     ]
   }

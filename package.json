@@ -8,7 +8,8 @@
   "private": true,
   "workspaces": [
     "ui-app",
-    "ui-lib"
+    "ui-lib",
+    "ui5-task-generatelibcachebuster"
   ],
   "scripts": {
     "postinstall": "cd approuter && yarn install",

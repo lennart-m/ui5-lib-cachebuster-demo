@@ -4,16 +4,19 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>UI5 app</title>
+
+        <script src="resources/my/ui5/lib/sap-ui-cachebuster-loader.js"></script>
+
         <script
             id="sap-ui-bootstrap"
             src="resources/sap-ui-cachebuster/sap-ui-core.js"
             data-sap-ui-theme="sap_fiori_3"
-            data-sap-ui-resourceroots='{"my.ui5.app": "./", "my.ui5.lib": "/lib"}'
+            data-sap-ui-resourceroots='{"my.ui5.app": "./"}'
             data-sap-ui-compatVersion="edge"
             data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
             data-sap-ui-async="true"
             data-sap-ui-frameOptions="trusted"
-            data-sap-ui-appCacheBuster=".,/lib"
+            data-sap-ui-appCacheBuster="."
         ></script>
     </head>
     <body class="sapUiBody">

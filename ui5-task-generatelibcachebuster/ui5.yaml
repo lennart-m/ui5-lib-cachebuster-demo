@@ -1,0 +1,7 @@
+specVersion: "2.2"
+metadata:
+  name: ui5-task-generatelibcachebuster
+kind: extension
+type: task
+task:
+  path: index.js
