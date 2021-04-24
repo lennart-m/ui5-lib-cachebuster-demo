@@ -13,6 +13,8 @@
   "scripts": {
     "postinstall": "cd approuter && yarn install",
     "build": "mbt build",
+    "build:app": "yarn workspace ui-app run build",
+    "build:lib": "yarn workspace ui-lib run build",
     "deploy": "cf deploy mta_archives/* -f --retries 0",
     "format": "prettier . --write"
   },
