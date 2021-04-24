@@ -20,7 +20,7 @@
   "forwardPorts": [8080],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "yarn install",
+  "postCreateCommand": "yarn install && cf api https://api.cf.eu10.hana.ondemand.com",
 
   // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "node"
