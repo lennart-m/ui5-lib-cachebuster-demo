@@ -13,16 +13,14 @@
     },
     {
       "type": "npm",
-      "path": "ui-lib",
-      "script": "build",
+      "script": "build:lib",
       "group": "build",
       "problemMatcher": [],
       "label": "Build UI5 lib"
     },
     {
       "type": "npm",
-      "path": "ui-app",
-      "script": "build",
+      "script": "build:app",
       "group": "build",
       "problemMatcher": [],
       "label": "Build UI5 app"
